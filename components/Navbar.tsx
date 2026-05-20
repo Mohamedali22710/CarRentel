@@ -54,22 +54,12 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              {user?.role === "admin" && (
-                <Link
-                  href="/admin/dashboard"
-                  className="relative inline-flex items-center justify-center px-4 py-2 font-bold text-white transition-all duration-200 bg-purple-600 rounded-full hover:bg-purple-500 focus:outline-none ring-2 ring-purple-600 ring-offset-2 overflow-hidden group shadow-[0_0_15px_rgba(147,51,234,0.5)]"
-                >
-                  Admin Dashboard
-                </Link>
-              )}
-              {user?.role !== "admin" && (
-                <Link
-                  href="/garage"
-                  className="text-gray-900 dark:text-gray-100 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  My Garage
-                </Link>
-              )}
+              <Link
+                href="/dashboard"
+                className="relative inline-flex items-center justify-center px-4 py-2 font-bold text-white transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-500 focus:outline-none ring-2 ring-blue-600 ring-offset-2 overflow-hidden group shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+              >
+                Dashboard
+              </Link>
               <button
                 onClick={logout}
                 className="bg-red-500 text-white rounded-full py-2 px-5 font-semibold hover:bg-red-600 transition-colors"
